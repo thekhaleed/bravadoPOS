@@ -1,0 +1,330 @@
+@font-face {
+    font-family: PT_sans ;
+    src: url(../public/fonts/PT_Sans/PTSans-Regular.ttf);
+}
+@font-face {
+    font-family: PT_sans2 ;
+    src: url(../public/fonts/PT_Sans/PTSans-Bold.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold ;
+    src: url(../public/fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: Poppins-thin ;
+    src: url(../public/fonts/Poppins/Poppins-Thin.ttf);
+}
+@font-face {
+    font-family: Poppins-Regular ;
+    src: url(../public/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins-Bold ;
+    src: url(../public/fonts/Poppins/Poppins-Bold.ttf);
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+*{
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+.head{
+    width: fit-content;
+    background-color: rgb(179, 111, 9);
+}
+.app{
+    background-color: rgba(0, 0, 0, 0.89);
+    height: 100vh;
+    overflow: hidden;
+}
+.screen{
+    overflow-y: scroll;
+    height: 100%;
+}
+.nav-area{
+    height:60vh;    
+}
+.header-area {
+    color: rgb(201, 200, 200);
+    font-family: PT_sans;
+    font-size: 12px;
+    cursor: pointer;   
+}
+.nav-list{
+    list-style:none;
+    padding: 0px;
+}
+.nav-list li a p{
+    color: black;
+    font-family: PT_sans;
+    text-transform: uppercase;
+    font-size: 12px;
+    cursor: pointer;
+}
+.log-out{
+    font-family: PT_sans2;
+    color: rgb(163, 24, 24);
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.burger-menu{
+    right: 0;
+}
+.head-title{
+    font-family: Roboto-Bold;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+.welcome-text{
+    font-family: Poppins-Regular;
+    text-transform: capitalize;
+    color: rgba(138, 136, 136, 0.788);
+    font-size: 14px;
+    margin-left: 5px;
+
+}
+.line{
+    color: rgba(133, 133, 133, 0.801);
+    width: 78vw;
+}
+.icon-box{
+    background-color: rgb(179, 111, 9);
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+}
+.sales-box{
+    width: 200px;
+    background-color: rgb(0, 0, 0);
+}
+.category-title{
+    font-family: Poppins-Regular;
+    text-transform: capitalize;
+    color: rgba(138, 138, 138, 0.89);
+    font-size: 12px;
+}
+.category-amount{
+    font-family: Roboto-Bold;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.767) ;
+
+}
+.dates{
+    width: 200px;
+    background-color:rgba(226, 226, 226, 0.925) ;
+    color: rgba(78, 78, 78, 0.753);
+    align-items: center;
+    border-color: black;
+    border: 1px;
+    
+}
+.dates p{
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    font-family: Poppins-Regular;
+    font-size: 10px;
+}
+.dates-parent{
+    justify-content: center;
+}
+.image{
+    height: 125px;
+    width: auto;
+    border-radius: 5px;
+}
+.prod{
+    width:70%;
+    overflow-y: scroll;
+    height: 83vh;
+    color: black;
+}
+
+.prod-card{
+    height: fit-content;
+    width: 160px;
+    font-family: Poppins-Regular ;
+    background-color:#d3d3d3 ;
+    text-transform: capitalize;
+}
+.delete-btn{
+    width: fit-content;
+    justify-self: center;
+    align-self: center;
+    padding: 0;
+}
+.product-title{
+    font-family: Poppins-Bold;
+    font-size: 18px;
+}
+.card-price{
+    font-size: 13.5px;
+}
+.card-availability{
+    font-family: Poppins-Regular;
+    text-transform: capitaliz;
+    color: rgba(70, 70, 70, 0.877);
+    font-size: 12px;
+}
+.form-title{
+    font-family: Poppins-Bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    color: rgb(230, 141, 8);
+}
+.meal-form{
+    font-family: Poppins-Regular;
+}
+.inputs{
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.image-selector{
+    overflow: hidden;
+}
+.side-panel{
+    width: 25%;
+}
+.table{
+    font-family: Poppins-Regular;
+    font-size: 14px;  
+    height: fit-content; 
+    min-height: 20vh;
+    
+}
+.customer-screen{
+    width:70%;
+    overflow-y: scroll;
+    background-color:rgba(59, 59, 59, 0.418) ;;
+    padding: 0;
+}
+.table-head{
+    font-family: Poppins-Bold;
+}
+.table-icons{
+    cursor: pointer;
+    margin: 3px;
+    
+}
+.order-panel{
+    /* width: 40%; */
+    background-color: rgba(0, 0, 0, 0.89);
+    height: 90vh;
+    /* box-shadow: rgba(255, 115, 0, 0.25) 0px 54px 35px, rgba(209, 84, 1, 0.12) 0px -12px 30px, rgba(131, 75, 2, 0.12) 0px 4px 6px, rgba(206, 85, 4, 0.17) 0px 12px 3px, rgba(255, 255, 255, 0.09) 0px -3px 5px; */
+    
+
+}
+.pos-panel{
+    /* width:50%; */
+    /* width:70%; */
+    overflow-y: scroll;
+    height: 85vh;
+    
+}
+.pos-prod-card{
+    width: 138px;
+    background-color: #d3d3d3;
+    height: 200px;
+    /* box-shadow: rgb(70, 47, 5) 0px 20px 30px -10px; */
+}
+.pos-prod-price{
+    font-family: Poppins-Regular;
+    text-transform: capitaliz;
+    color: rgba(70, 70, 70, 0.877);
+    font-size: 13px;
+    
+}
+.pos-image{
+    height: 110px;
+    width: auto;
+    border-radius: 5px;
+    
+}
+.quantity{
+    width:50px;
+    height: 25px;
+}
+.order-table, .customer-selection{
+    background-color: #d3d3d3;
+}
+
+.order-table{
+    height: 40vh;
+    overflow-y: scroll;
+    text-transform: capitalize;
+}
+.orders{
+    font-family: PT_sans;
+    font-size: 15px;
+    min-height: 10px;
+}
+.order-lables{
+    font-size: 16px;
+}
+#availability{
+
+}
+.checkout-panel{
+    height:38vh;
+    font-family: Poppins-Bold ;
+    text-transform: capitalize;
+    font-size: 13px;
+    /* background-color: rgb(179, 111, 9); */
+}
+.pay-label{
+    color: rgba(172, 171, 171, 0.877);
+}
+.checkout-panel hr{
+    width: 100%;
+    
+}
+.line2{
+
+    
+}
+.payment-btn{
+    background-color: rgba(70, 70, 70, 0.877);
+    border: none;
+    color: rgb(185, 185, 185);
+    font-family: Poppins-Regular;
+    border-radius: 15px;
+}
+.payment-btn:hover{
+    background-color: white;
+    color: black;
+}
+.payment{
+    width: 90%;
+}
+.payment-bt{
+    width: 100%;
+}
+.payment-bt-checkout{
+    background-color: #198754;
+    color: white;
+}
+.payment-bt-checkout:hover{
+    background-color: white;
+    color: black;
+
+}
+.payment-bt-cancel{
+    background-color: #dc3545;
+    color: black;
+}
+.payment-bt-cancel:hover{
+
+    background-color: white;
+    color: black;
+}
+.grand{
+    font-size: 15px;
+}
+.grand-label{
+    font-size: 15px;
+}
