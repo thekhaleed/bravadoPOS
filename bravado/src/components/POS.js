@@ -11,9 +11,16 @@ function POS(props) {
   });
 
   const [cart, setCart] = useState([]);
-  const [oder, setOrder] = useState([])
+  const [order, setOrder] = useState({
 
-  
+    "order_number": '',
+    "order_sub_total": '',
+    "delivery": false,
+    "order_grand_total": '',
+    "customer_name": "",
+    "staff_name": "",
+
+  })
 
   function pos_product_add(meal){
       let find_product_in_cart = cart.find(meal_to_add =>{
@@ -49,6 +56,14 @@ function POS(props) {
       }
 
   }
+
+  var order_sub_total = 0
+
+  cart.forEach(element => {
+    order_sub_total = order_sub_total + element.product_sub_total 
+  });
+
+  var order_grand_total = order.delivery ? order_sub_total +50 : order_sub_total
 
   const handleFormChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -205,7 +220,7 @@ function POS(props) {
               aria-label=".form-select-sm "
             >
               <option selected>Select Customer</option>
-              <option value="1">One</option>
+              <option value="1">Walk in Customer</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
@@ -232,7 +247,7 @@ function POS(props) {
             <span className="bg-warnin d-flex col-11 flex-column py-0 gap-0">
               <span className="box-1 d-flex justify-content-between p-">
                 <section className="pay-label">Sub Total</section>
-                KSh.500
+                KSh.{order_sub_total}
               </span>
 
               <span className="box-1 d-flex justify-content-between mt-1 ">
@@ -252,6 +267,7 @@ function POS(props) {
                     id="availability"
                     name="availability"
                     width={30}
+                    
                   />
                 </section>
               </span>
@@ -260,7 +276,7 @@ function POS(props) {
 
               <span className="box-1 d-flex justify-content-between p-">
                 <section className="pay-label grand-label">Grand Total</section>
-                KSh.1000
+                KSh.{order.delivery ? order_sub_total +50 : order_sub_total}
               </span>
 
               <span className="bg-primar d-flex justify-content-center gap-3 mt-3">
@@ -283,7 +299,7 @@ function POS(props) {
             </span>
 
             <span className=" payment bg-warnin gap-2 d-flex flex-column align-items-center">
-              <button className="payment-bt payment-bt-checkout btn ">
+              <button className="payment-bt payment-bt-checkout btn " >
                 Check Out
               </button>
               <button className="payment-bt payment-bt-cancel btn" onClick={() => handleCancel()}>
@@ -300,5 +316,9 @@ function POS(props) {
     </div>
   );
 }
-
 export default POS;
+
+
+// function getRandomArbitrary(min, max) {
+//   return Math.random() * (max - min) + min;
+// }

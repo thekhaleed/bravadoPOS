@@ -73,7 +73,7 @@ function Staff(props) {
   const displayStaff =props.AllStaff.map(staff => {
       
     const index = props.AllStaff.indexOf(staff) +1
-    console.log(staff.created.substring(0,19))
+    
     return(
       <tr  className='table.active table-row text-capitalize bg-danger p-0 ' key={index}>
         <th scope="row">{index}</th>

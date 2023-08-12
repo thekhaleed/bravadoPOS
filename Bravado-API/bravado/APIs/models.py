@@ -32,10 +32,10 @@ class Staff(models.Model):
     def __str__(self):
         return f' {self.first_name} {self.last_name}'
     
-def order_number_generator():
-    res =''.join( random.choices(string.ascii_uppercase + string.digits, k=6))
-    od= "BF-"+ str(res)
-    return od
+# def order_number_generator():
+#     res =''.join( random.choices(string.ascii_uppercase + string.digits, k=6))
+#     od= "BF-"+ str(res)
+#     return od
 
 class Order(models.Model):
 
@@ -44,7 +44,7 @@ class Order(models.Model):
         ("M", "Mpesa"),
     ]
 
-    order_number = models.CharField(max_length=10, unique=True, default= order_number_generator, editable= False)
+    order_number = models.CharField(max_length=10, unique=True)
     order_sub_total= models.CharField(max_length=6)
     delivery=models.BooleanField(default= False)
     order_grand_total= models.CharField(max_length=6)
